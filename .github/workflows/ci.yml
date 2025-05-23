@@ -20,13 +20,13 @@ jobs:
         run: npx jest --coverage
       
       - name: SonarCloud Scan
-        uses: SonarSource/sonarqube-scan-action@v5.0.0  # Ação atualizada aqui
+        uses: SonarSource/sonarqube-scan-action@v5.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
-          args: |
+          args: >
             -Dsonar.organization=wendelbitencourt
             -Dsonar.projectKey=WendelBitencourt_validador-notas-ci
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
-          scannerVersion: 7.0.2.4839  # Versão explícita do scanner
+          scannerVersion: 7.0.2.4839
