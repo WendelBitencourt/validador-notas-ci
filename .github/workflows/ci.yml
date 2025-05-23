@@ -26,6 +26,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.organization=wendelbitencourt  # Ex: "seuuser" ou "nome-da-org"
-            -Dsonar.projectKey=WendelBitencourt_validador-notas-ci    # Encontre isso no SonarCloud
+            -Dsonar.organization=wendelbitencourt
+            -Dsonar.projectKey=WendelBitencourt_validador-notas-ci
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
