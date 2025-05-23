@@ -25,8 +25,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
-          args: >
+          args: >-
             -Dsonar.organization=wendelbitencourt
             -Dsonar.projectKey=WendelBitencourt_validador-notas-ci
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }}
           scannerVersion: 7.0.2.4839
