@@ -12,3 +12,6 @@ yarn-error.log*
 # Arquivos do sistema operacional
 .DS_Store
 Thumbs.db
+
+# package-lock.json: arquivo gerado automaticamente pelo npm
+package-lock.json
